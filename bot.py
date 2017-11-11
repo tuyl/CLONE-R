@@ -8,77 +8,82 @@ from bs4 import BeautifulSoup
 from threading import Thread
 #from pyowm import OWM
 
+
 cl = LINETCR.LINE()
-cl.login(token="Em91waQIcvXWyMrE8SMc.jB1lTE0oNuMV5aYqlcvM7a.7P/be3Mufcd$
+cl.login(token="Em91waQIcvXWyMrE8SMc.jB1lTE0oNuMV5aYqlcvM7a.7P/be3MufcdYxm9DNnjlwb3iznUwTax6a/EdRmIq8Gk=")
 cl.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="EmFfB9MKm6K5cWzaHTud.ljW+dg/qfx/S+nua8chOdq.qb6cEnwV35D$
+kk.login(token="EmFfB9MKm6K5cWzaHTud.ljW+dg/qfx/S+nua8chOdq.qb6cEnwV35DvutN/DBZFiz+oGHA8o3yTxPkGcdgOYyM=")
 kk.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="EmpYFvEcoVYxm0yKgG3c.kPCIxd3dx0LAHGGMosEvBa.+cl/ASX02L2$
+ki.login(token="EmpYFvEcoVYxm0yKgG3c.kPCIxd3dx0LAHGGMosEvBa.+cl/ASX02L2uR1rO8hILexKyxAPgjhBcSHz941O8JJ4=")
 ki.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="EmLO74bVtkpmo1RO0Ln9.lx6iYJ1ZQ3OTRUu4MoLSQq.U4ciUWB81tn$
+kc.login(token="EmLO74bVtkpmo1RO0Ln9.lx6iYJ1ZQ3OTRUu4MoLSQq.U4ciUWB81tnXCWlUSNSzv3aQbAi43FIgP/uiXZVNUHk=")
 kc.loginResult()
 
 print "=====Login Berhasil====="
 reload(sys)
 sys.setdefaultencoding('utf-8')
-helpMessage =""" 􀜁􀅹Salute􏿿 | Keyboard Member | 􀜁􀅹Salute􏿿
 
-[􀜁􀅹Salute􏿿] Hi  (yah begitulah)
-[􀜁􀅹Salute􏿿] Creator ( Creator / Admin )
-[􀜁􀅹Salute􏿿] Me ( Info Contact )
-[􀜁􀅹Salute􏿿] Gift ( Gift Thema )
-[􀜁􀅹Salute􏿿] Ginfo ( Group info )
-[􀜁􀅹Salute􏿿] Welcome ( yah begitulah )
-[􀜁􀅹Salute􏿿] Cancel ( Cancel member pending )
-[􀜁􀅹Salute􏿿] Tagall ( Tagall member group )
-[􀜁􀅹Salute􏿿] pp @tag ( PP yang di tag )
-[􀜁􀅹Salute􏿿] cover @tag ( Cover yang di tag )
-[􀜁􀅹Salute􏿿] Kedapkedip ( Teks kekinian 􀜁􀅔Har Har􏿿 , Contoh : Kedapkedip  )
-[􀜁􀅹Salute􏿿] /apakah ( Kerang ajaib )
-[􀜁􀅹Salute􏿿] /translate-en ( Translate Indo - EN , Contoh : /translate-en Grup ) 
-[􀜁􀅹Salute􏿿] /set ( Set point )
-[􀜁􀅹Salute􏿿] /check ( Check sider )
-[􀜁􀅹Salute􏿿] /lagu ( Cari lagu , Contoh : /lagu iwan fals ibu )
-[􀜁􀅹Salute􏿿] /lirik ( Cari Lirik , Contoh : /lirik Payung teduh Akad )
-[􀜁􀅹Salute􏿿] /ig ( Cek profile Instagram , Contoh : /ig instagram )
-[􀜁􀅹Salute􏿿] /youtube ( Scrap link youtube , Contoh : /youtube young dumb & broke )
+helpMessage =""" 􀜁Command Member
 
-􀜁􀅹Salute􏿿 | Keyboard (Admin) | 􀜁􀅹Salute􏿿
+☞ Hi
+☞ Creator
+☞ Me
+☞ Gift
+☞ Ginfo
+☞ Welcome
+☞ Cancel
+☞ Tagall
+☞ pp @tag
+☞ cover @tag
+☞ Kedapkedip ( Teks Kekinian)
+☞ /apakah ( Kerang ajaib )
+☞ /translate-en ( Translate ID-EN)
+☞ /set ( Set point )
+☞ /check ( Check sider )
+☞ /lagu ( Contoh : /lagu iwan fals ibu )
+☞ /lirik ( Contoh : /lirik Payung teduh Akad )
+☞ /ig ( Contoh : /ig riki_oktopan )
+☞ /youtube (  Contoh : /youtube Anu-Anu an )
 
-[􀜁􀅹Salute􏿿] bye # Mengusir Bot (Di Aktifin Admin)
-[􀜁􀅹Salute􏿿] /unban > Tidak Di Banned
-[􀜁􀅹Salute􏿿] /ban > Target Di Banned
-[􀜁􀅹Salute􏿿] join > Membawa Pasukan (4 Bot)
-[􀜁􀅹Salute􏿿] ourl > Open Link Grup *Tanpa Staaff/Admin
-[􀜁􀅹Salute􏿿] curl > Menutup Link Grup *Tanpa Staff/Admin
-[􀜁􀅹Salute􏿿] /spam (Jumlah) (Kata) > Menyempam Kata
+􀜁􀅹Command  (Admin)
 
-[􀜁􀅹Salute􏿿] /nk @tag -> Mengkick Target
-[􀜁􀅹Salute􏿿] /bcgc -> Untuk Broadcast Group
-[􀜁􀅹Salute􏿿] /bc -> Untuk Broadcast Melalui Pc
-[􀜁􀅹Salute􏿿] /grup id -> Mengentahui Grup List
-[􀜁􀅹Salute􏿿] /bio -> Mengedit Bio
-[􀜁􀅹Salute􏿿] /gn -> Mengganti Nama Grup
-[􀜁􀅹Salute􏿿] /cn -> Mengganti Nama Bot 1,2,3,4
-[􀜁􀅹Salute􏿿] /removechat -> remove chat
-[􀜁􀅹Salute􏿿] kill -> kick yang ban
+☣ bye #
+☣ /unban
+☣ /ban
+☣ join
+☣ ourl
+☣ curl
+☣ /spam
+☣ /nk @tag -> kick Target
+☣ /bcgc -> Broadcast Group
+☣ /bc -> Broadcast Melalui Pm
+☣ /grup id
+☣ /bio -> edit Bio
+☣ /gn -> Mengganti Nama Grup
+☣ /cn -> Mengganti Nama Bot 1,2,3,4
+☣ /removechat -> remove chat
+☣ kill -> kick yang ban
+☣ contact on/off
+☣ join on/off
+☣ Gcancel on/off
+☣ leave on/off
+☣ protect on/off
+☣ qr on/off
+☣ invite on/off
+☣ cancel on/off
 
-[􀜁􀅹Salute􏿿] contact on/off
-[􀜁􀅹Salute􏿿] join on/off
-[􀜁􀅹Salute􏿿] Gcancel on/off
-[􀜁􀅹Salute􏿿] leave on/off
-[􀜁􀅹Salute􏿿] protect on/off
-[􀜁􀅹Salute􏿿] qr on/off
-[􀜁􀅹Salute􏿿] invite on/off
-[􀜁􀅹Salute􏿿] cancel on/off
+☣ Pogo -> Ada deh....
 
-[􀜁􀅹Salute􏿿] Mulai -> Meratakan  [􀜁􀅹Salute􏿿]"""
+
+
+Š̃͒ͥt̀́ͥͧrͭͫͭ̏ẻ͑ͥͦeͮͫ̓ͥt̒̂ͨ̄ ̓ͫͯ̑Pͬͩ̇̿ȕ̿͋̐n͂̑ͩ̀k̔ͯ̎͑ ̽̅̓̂Bͤ͛̆̑ô̡̏̚t̒͂̆͋
+"""
 
 KAC=[cl,ki,kk,kc]
 dmid = cl.getProfile().mid
